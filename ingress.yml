@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/cluster-issuer: letsencrypt-production
   name: APP_NAME-ingress
   namespace: APP_NAME-system
 spec:
@@ -21,4 +21,3 @@ spec:
   - hosts:
     - APP_NAME.teoo.io
     secretName: APP_NAME-ingress-cert
-
